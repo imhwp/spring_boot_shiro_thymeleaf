@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.pollix.at//thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello world</p>
+    <a th:href="@{/user/logout}">退出登录</a>
+    <ul>
+        <ul>
+            <span shiro:principal=""></span>
+            <span shiro:hasPermission="user:delete:*">
+                拥有删除权限
+            </span>
+            <span shiro:hasRole="user">拥有用户权限</span>
+            <span shiro:hasRole="admin">拥有管理员权限</span>
+            <span shiro:hasRole="admin2">拥有管理员2权限</span>
+        </ul>
+        <li>商品管理</li>
+        <li>价格管理</li>
+    </ul>
+</body>
+</html>
